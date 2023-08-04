@@ -1,12 +1,16 @@
 import React from 'react'
 import Header from '../../components/header/Header'
+import { useForm } from 'react-hook-form'
 
 const Profile = () => {
+
+    const {register, handleSubmit, formState: {errors}, reset} = useForm()
+
   return (
     <div>
-        <Header/>
+        <main className='d-flex flex-column align-items-center mt-5'>
         <h1>Cambiar el perfil</h1>
-        <form className='card p-5 bg-info-subtle' onSubmit={handleSubmit(onSubmit)}>
+        <form className='card p-5 bg-info-subtle mt-3' onSubmit={handleSubmit()}>
         <div className="mb-3">
             <label  className="form-label"><span >Nombre</span>
             <input type="text" className="form-control mt-2"  placeholder="Escriba su nombre" {...register('name', {required: true})}/>
@@ -34,6 +38,7 @@ const Profile = () => {
         </div>
         <button type="submit" className='btn btn-success'>Registrarse</button>
         </form>
+        </main>
     </div>
   )
 }

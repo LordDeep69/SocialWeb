@@ -8,6 +8,7 @@ import Home from '../../pages/home/Home';
 import { initialUser, userReducer } from '../../services/usersReducer';
 import { getSession } from '../../services/sessionService';
 import Profile from '../../pages/profile/Profile';
+import Layout from '../layout/Layout';
 
 export const AppContext = createContext({});
 
@@ -42,9 +43,10 @@ const Router = () => {
                 </Route>
 
                 <Route element={<PrivateRouter isAutenticated={userLogin.isAutenticated}/>}>
-                    <Route path='/' element={<Home/>}/>
-                        {/* <Route index element={<Home/>}/> */}
-                        <Route path='profile' element={<Profile/>}/>
+                    <Route element={<Layout/>}>
+                        <Route index element={<Home/>}/>
+                        <Route path='/profile' element={<Profile/>}/>
+                    </Route>
                 </Route>
             </Route>
         </Routes>
