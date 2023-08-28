@@ -1,0 +1,112 @@
+// define algunas variables para los colores y las medidas
+$primary-color: #ff6f61; // un color naranja vivo
+$secondary-color: #f0f0f0; // un color gris claro
+$border-radius: 1vw; // un radio de borde redondeado
+$margin: 1vw; // un margen entre los elementos
+$padding: 1vw; // un relleno dentro de los elementos
+
+// usa la clase comment para dar estilo al componente Comment
+.comment {
+  display: flex; // usa flexbox para alinear los elementos
+  flex-direction: column; // ordena los elementos en una columna
+  border: 1px solid $secondary-color; // agrega un borde alrededor del comentario
+  border-radius: $border-radius; // redondea los bordes del comentario
+  margin: $margin; // agrega un margen alrededor del comentario
+  max-width: 500px;
+
+  .story__friend 
+  {
+
+
+    .contentFriend
+    {
+
+        width: 15vw;
+        height: 15vw;
+
+        @media screen and (min-width: 500px) 
+        {
+          width: 68.25px;
+          height: 68.25px;
+        }
+        &__img 
+        {
+            border-color: blue;
+            width: 15vw;
+            height: 15vw;
+            @media screen and (min-width: 500px) 
+            {
+              width: 68.25px;
+              height: 68.25px;
+            }
+        }
+    }
+  }
+
+  // usa la clase comment-header para dar estilo a la cabecera del comentario
+  .comment-header {
+    display: flex; // usa flexbox para alinear los elementos
+    align-items: center; // centra los elementos verticalmente
+    padding: $padding; // agrega un relleno dentro de la cabecera
+
+    // usa la clase comment-user-id para dar estilo al id del usuario que comenta
+    .comment-user-id {
+      font-weight: bold; // usa una fuente en negrita
+      color: $primary-color; // usa el color primario
+      margin-left: $margin; // agrega un margen a la izquierda del id
+      font-size: 5vw;
+
+      @media screen and (min-width: 500px) 
+      {
+        font-size: 25px;
+      }
+    }
+
+    // usa la clase comment-post-info para dar estilo a la información del post comentado
+    .comment-post-info {
+      font-style: italic; // usa una fuente en cursiva
+      color: gray; // usa un color gris oscuro
+      margin-left: auto; // alinea la información a la derecha de la cabecera
+      font-size: 6vw;
+      margin-right: 3vw;
+      display: flex;
+      flex-direction: column;
+
+      @media screen and (min-width: 500px) 
+      {
+        font-size: 30px;
+        margin-right: 0px;
+      }
+    }
+  }
+
+  // usa la clase comment-content para dar estilo al contenido del comentario
+  .comment-content {
+    padding-left: $padding; // agrega un relleno dentro del contenido
+    
+    p {
+      word-wrap: break-word; // permite que las palabras se rompan si no caben en una línea
+      font-size: 5vw;
+      @media screen and (min-width: 500px) 
+      {
+        font-size: 25px;
+        
+      }
+    }
+  }
+
+  // usa la clase comment-footer para dar estilo al pie del comentario
+  .comment-footer {
+    display: flex; // usa flexbox para alinear los elementos
+    justify-content: space-around; // distribuye los elementos con espacio entre ellos
+    padding: $padding; // agrega un relleno dentro del pie
+    
+  }
+}
+
+
+.commentN 
+{
+    width: 15vw;
+    height: 15vw;
+}

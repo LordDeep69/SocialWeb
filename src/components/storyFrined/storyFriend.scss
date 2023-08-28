@@ -1,0 +1,47 @@
+
+
+.story__friend
+{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+
+    .contentFriend
+    {
+        width: 64px;
+        height: 64px;
+        flex-shrink: 0;
+        border-radius: 64px;
+        background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+        position: relative;
+        scroll-snap-align: center;
+
+
+
+        &__img
+        {
+            width: 64px;
+            height: 64px;
+            flex-shrink: 0;
+            border-radius: 64px;
+            background: lightgray 50% / cover no-repeat;
+            scroll-snap-align: center;
+            border: 1px solid rgb(225, 28, 196); // Añade esta línea
+        }
+    }
+
+
+    .userName 
+    {
+        color: #2F2F2F;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: 'Balsamiq Sans', cursive;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+}

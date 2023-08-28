@@ -1,0 +1,168 @@
+.footer 
+        {
+            max-width: 500px;
+
+            position: fixed; // Añade esta línea para fijar el footer
+            bottom: 0; // Añade esta línea para alinear el footer al borde inferior
+            height: auto;
+
+            .containerFooter 
+            {
+                position: relative;
+
+                .figureFooter
+                {
+                    width: 100vw; 
+
+                    @media screen and (max-width: 330px) 
+                    {
+
+                    }
+
+                    @media screen and (min-width: 500px) 
+                    {
+                        width: 475px;
+                        margin-left: 13px;
+                    }
+                    
+                }
+                .circleFooter
+                {
+    
+                    width: 15vw;
+                    height: 15vw;
+                    position: absolute;
+                    left: 42%;
+                    top: -50%;
+
+                    @media screen and (max-width: 330px) 
+                    {
+                            
+                    }
+
+                    @media screen and (min-width: 500px) 
+                    {
+                        width: 73.4px;
+                        height: 73.4px;                    
+                        left: 43.5%;
+                    }
+                }
+
+                .material-symbols-outlined
+                { 
+
+                    &.addFooter 
+                    {
+                        position: absolute;
+                        left: 45.2%;
+                        top: -27%;
+                        color: #FFF;
+                        font-size: 8.5vw;
+                        @media screen and (min-width: 500px) 
+                        {
+                            font-size: 43px;
+                            left: 46.5%;                  
+                        }
+                        font-variation-settings:
+                        'FILL' 0,
+                        'wght' 1500,
+                        'GRAD' 0,
+                        'opsz' 48
+
+
+
+    
+
+                    }
+
+
+
+                }
+
+
+                .homeFooter 
+                {
+                    position: absolute;
+                    left: 5%;
+                    top: 25%;
+                    @media screen and (max-width: 350px) 
+                    {
+                        width: 15px;
+                        height: 15px;
+                    }
+                }
+
+                .searchFooter 
+                {
+                    position: absolute;
+                    left: 20%;
+                    top: 25%;
+                    @media screen and (max-width: 350px) 
+                    {
+                        width: 15px;
+                        height: 15px;
+                    }
+                }
+
+                .campFooter 
+                {
+                    position: absolute;
+                    left: 70%;
+                    top: 25%;
+
+                    @media screen and (max-width: 350px) 
+                    {
+                        left: 60%;
+                        width: 15px;
+                        height: 15px;
+                    }
+                }
+
+                .story__friend 
+                
+                {
+                    position: absolute;
+                    left: 85%;
+                    top: 20%;
+
+                    @media screen and (max-width: 350px) 
+                    {
+                        left: 75%;
+                    }
+
+                    .contentFriend
+                    {
+                        width: 20px;
+                        height: 20px;
+                        @media screen and (max-width: 350px) 
+                        {
+                            width: 15px;
+                            height: 15px;                        
+                            position: relative;
+
+                        }
+                        
+
+                        &__img 
+                        {
+                            width: 30px;
+                            height: 30px;  
+                            @media screen and (max-width: 350px) 
+                            {
+                                width: 25px;
+                                height: 25px;                            
+                                position: absolute;
+                                left: 10%;
+                            }
+                        }
+
+
+                    }
+                }
+
+
+
+
+            }
+
+        }

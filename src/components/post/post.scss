@@ -1,0 +1,225 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Barlow+Condensed:wght@200&family=Barlow:wght@100&family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap');
+
+.post 
+{
+    max-width: 500px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #FFF;
+
+
+    &__user 
+    {
+        display: flex;
+        justify-content: flex-start;
+        align-content: center;
+
+        .story__friend
+        {
+            display: flex;
+            flex-direction: row;
+            gap: 1.5vw;
+            margin-left: 2.5vw;
+            .contentFriend
+            {
+                display: flex;
+                width: 34px;
+                height: 34px;
+                margin-top: 1vw;
+                &__img 
+                {
+                    
+                    width: 34px;
+                    height: 34px;
+                    cursor: pointer;
+
+
+                }
+            }
+
+            .userName 
+            {
+                color: #2F2F2F;
+                font-feature-settings: 'clig' off, 'liga' off;
+                font-family: 'Balsamiq Sans', cursive;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+        }
+    }
+
+    &__content 
+    {
+        img 
+        {
+            width: 95%;
+            height: auto;
+            border-radius: 10px;
+            background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+            cursor: pointer;
+        }
+    }
+
+    &__actions 
+    {
+        display: flex;
+        justify-content: space-between;
+        margin: 4vw;
+
+        .lcs
+        {
+            display: flex;
+            gap: 5vw;
+
+            .favorite
+            {
+                margin-top: 1vw;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                @media screen and (min-width: 500px) 
+                {
+                    margin-top: 4.85px;    
+                }
+                
+
+                .liked 
+                {
+                    cursor: pointer;
+
+                }
+
+                .numberLike
+                {
+                    color: #2F2F2F;
+                    text-align: center;
+                    font-feature-settings: 'clig' off, 'liga' off;
+                    font-family: 'Balsamiq Sans', cursive;
+                    font-size: 10px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+            }
+
+            .material-symbols-outlined {
+                cursor: pointer;
+                &.like {
+                    flex-shrink: 0;
+                    font-size: 35px;
+                    display: flex;
+                    flex-direction: column;
+                    
+
+
+
+                    font-variation-settings:
+                        'FILL' 0,
+                        'wght' 500,
+                        'GRAD' 0,
+                        'opsz' 48
+                }
+
+
+
+            }
+
+            .commentPost 
+            {
+                margin-top: 5px ;
+                display: flex;
+                flex-direction: column;
+                cursor: pointer;
+                
+                .numberComments
+                {
+                    margin-top: 5px;
+                    color: #2F2F2F;
+                    text-align: center;
+                    font-feature-settings: 'clig' off, 'liga' off;
+                    font-family: 'Balsamiq Sans', cursive;
+                    font-size: 10px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+            }
+        }
+        
+        .saved
+        {
+            margin-top: 2px;
+            cursor: pointer;
+        }
+        .sharePost 
+        {
+            margin-top: 5px;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            .numberShare 
+            {
+                margin-top: 5px;
+                color: #2F2F2F;
+                text-align: center;
+                font-feature-settings: 'clig' off, 'liga' off;
+                font-family: 'Balsamiq Sans', cursive;
+                font-size: 10px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+        }
+
+        .material-symbols-outlined 
+        {
+            
+            &.share 
+            {
+                cursor: pointer;
+
+                
+                flex-shrink: 0;
+                font-size: 35px;
+
+
+                font-variation-settings:
+                    'FILL' 0,
+                    'wght' 500,
+                    'GRAD' 0,
+                    'opsz' 48
+            }
+        }
+    }
+
+
+    &__comments 
+    {
+        display: flex;
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        align-self: center;
+        margin-left: 4.5vw;    
+        span
+        {
+            color: #000;
+            text-align: justify;
+            font-feature-settings: 'clig' off, 'liga' off;
+            font-family:'Baloo Thambi 2', cursive;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+
+
+        }
+    }
+    
+}

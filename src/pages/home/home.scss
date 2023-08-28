@@ -1,0 +1,297 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    background: radial-gradient(80% 80.00% at 80% 80.00%, rgba(200, 40, 163, 0.364) 0%, rgba(168, 57, 129, 0) 100%);
+    overflow: auto; // Añade esta línea
+    max-width: 500px;
+
+    // @media screen and (min-width: 500px) 
+    // {
+    //     position: absolute;  
+    //     justify-content: center;  
+    //     align-content: center;
+    // }
+
+    
+    
+
+
+    .container__header {
+        display: flex;
+        flex-direction: column;
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2vw;
+            margin-left: 3vw;
+            margin-right: 1vw;
+            align-items: center;
+
+
+            &__figure {
+                width: 190px;
+                height: 36px;
+                flex-shrink: 0;
+                align-self: center;
+                align-items: center;
+                align-content: center;
+                justify-content: center;
+                @media screen and (max-width: 385px) 
+                {
+                    width: 40vw;
+                    height: auto;
+                }
+
+                .home__img {
+                    width: 190px;
+                    height: 36px;
+                    flex-shrink: 0;
+                    align-self: center;
+                    align-items: center;
+                    align-content: center;
+                    justify-content: center;
+
+                    @media screen and (max-width: 385px) 
+                    {
+                        width: 40vw;
+                        height: auto;
+                    }
+                }
+            }
+
+            &__icon {
+                display: flex;
+                gap: 25px;
+                @media screen and (max-width: 385px) 
+                {
+                    gap: 5px;
+
+                }
+
+                .material-symbols-outlined {
+                    &.like {
+                        flex-shrink: 0;
+                        font-size: 35px;
+                        fill: linear-gradient(180deg, #FF7674 0%, #EB5E5C 100%);
+
+                        @media screen and (max-width: 385px) 
+                        {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 10vw;
+                        }
+                        font-variation-settings:
+                            'FILL' 0,
+                            'wght' 500,
+                            'GRAD' 0,
+                            'opsz' 48
+                    }
+
+                }
+
+                .comments
+                {
+                    margin-top: 7px;
+                    @media screen and (max-width: 385px) 
+                    {
+                        margin-top: 0px;
+                        width: 9vw;
+                        height: 9vw;
+                    }
+                }
+
+                /* Estilos del botón con la clase logout */
+                .logout {
+                    font-family: 'Balsamiq Sans', cursive;                    
+                    font-size: 10px; /* Cambiar el tamaño */
+                    font-weight: bold; /* Cambiar el grosor */
+                    color: #fff; /* Cambiar el color */
+                    padding: 10px; /* Dar espacio interno */
+                    border: 2px solid rgb(199, 39, 235); /* Definir el borde */
+                    border-radius: 5px; /* Redondear las esquinas */
+                    background-color: rgb(192, 23, 155); /* Cambiar el color de fondo */
+                    cursor: pointer; /* Cambiar el tipo de cursor */
+
+                    @media screen and (max-width: 385px) 
+                    {
+                        font-size: 5px;
+                        border: 0.5px;    
+                        padding: 4px;
+                        height: 24px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        align-content: center;
+                        align-self: center;
+                    }
+
+                    &:hover {
+                        background-color: #f44; /* Cambiar el color de fondo a un tono más claro */
+                        border-color: #f88; /* Cambiar el color del borde a un tono más claro */
+                    }
+
+                    &:active {
+                        transform: scale(0.95); /* Reducir ligeramente el tamaño para dar un efecto de presión */
+                    }
+                    
+                }
+                
+                /* Estilos del botón al pasar el ratón por encima */
+                
+                /* Estilos del botón al hacer clic */
+
+  
+            }
+        }
+
+
+
+        .story {
+            margin-left: 2vw;
+            display: flex;
+            gap: 24px;
+            overflow-x: auto; // Añade esta línea
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth; // Añade esta línea
+
+
+            &::-webkit-scrollbar {
+                /* Oculta la barra de scroll */
+                height: 0;
+              }
+
+
+        }
+    }
+
+    &__main 
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 2vw;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        margin-top: 6vw;
+        overflow: auto;
+
+
+        
+
+    }
+
+        &__footer 
+        {
+
+            position: fixed; // Añade esta línea para fijar el footer
+            bottom: 0; // Añade esta línea para alinear el footer al borde inferior
+            height: auto;
+
+            .containerFooter 
+            {
+                position: relative;
+
+                .figureFooter
+                {
+                    width: 100vw; 
+                    
+                }
+                .circleFooter
+                {
+    
+                    width: 15vw;
+                    height: 15vw;
+                    position: absolute;
+                    left: 42%;
+                    top: -50%;
+                }
+
+                .material-symbols-outlined
+                { 
+
+                    &.addFooter 
+                    {
+                        position: absolute;
+                        left: 45.2%;
+                        top: -27%;
+                        color: #FFF;
+                        font-size: 8.5vw;
+    
+                        font-variation-settings:
+                        'FILL' 0,
+                        'wght' 1500,
+                        'GRAD' 0,
+                        'opsz' 48
+                    }
+
+                }
+
+
+                .homeFooter 
+                {
+                    position: absolute;
+                    left: 5%;
+                    top: 25%;
+                }
+
+                .searchFooter 
+                {
+                    position: absolute;
+                    left: 20%;
+                    top: 25%;
+                }
+
+                .campFooter 
+                {
+                    position: absolute;
+                    left: 70%;
+                    top: 25%;
+                }
+
+                .story__friend 
+                
+                {
+                    position: absolute;
+                    left: 85%;
+                    top: 20%;
+
+                    .contentFriend
+                    {
+                        width: 20px;
+                        height: 20px;
+
+                        &__img 
+                        {
+                            width: 30px;
+                            height: 30px;  
+                        }
+
+
+                    }
+                }
+
+
+
+
+            }
+
+        }
+
+}
+
+
+.wrapper 
+    {         overflow: hidden;    
+
+        @media screen and (min-width: 500px) 
+        {
+            width: 95vw;
+            display: flex;
+            justify-content: center;
+            margin: 0 auto; /* Esto centra el <div> horizontalmente */     
+            
+        }
+    }

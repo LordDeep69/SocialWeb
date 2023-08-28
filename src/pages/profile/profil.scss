@@ -1,0 +1,335 @@
+
+
+.profile 
+{
+    display: flex; 
+    flex-direction: column; 
+    overflow-y:hidden ;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth; // Añade esta línea
+    height: 100vh;
+    max-width: 500px;
+
+    @media  screen and (max-width:340px ) 
+    
+    {
+        width: 125vw;
+    }
+
+    .profileUp 
+    {
+        
+        &__cover
+        {
+            width: 100vw;
+            margin: 0;
+            position: relative;
+            @media screen and (min-width: 500px) 
+            {
+                width:500px;  
+            }
+            .cover 
+            {
+                width: 100vw;
+                height: 70vw;
+
+                @media screen and (min-width: 500px) 
+                {
+                    width:500px;
+                    height: 350px;    
+                }
+            }
+
+            .back 
+            {
+                position: absolute;
+                left: 5%;
+                top: 10%;
+            }
+
+            .points 
+            {
+                position: absolute;
+                left: 90%;
+                top: 8%;
+            }
+        }
+
+        &__data 
+        {
+            width: 100vw;
+            background: radial-gradient( rgba(255, 118, 116, 0.60) 0%, rgba(255, 118, 116, 0.00) 100%);
+            position: relative;
+
+            @media screen and (min-width: 500px) 
+            {
+                width:500px;
+            }
+
+            .dataUp
+            {
+                display: flex;
+                justify-content: space-between;
+                margin-left: 7vw;
+                margin-right: 7vw;
+                padding-top: 2vw;
+
+                @media screen and (min-width: 500px) 
+                {
+                    margin-left: 35px;
+                    margin-right: 35px;
+                    padding-top: 10px;
+                }
+
+
+
+                &__numbers
+                {
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-align: center;
+
+                    span
+                    {
+                        font-family: 'Balsamiq Sans', cursive;
+                        color: #000;
+                        font-feature-settings: 'clig' off, 'liga' off;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                    }
+
+                    b
+                    {
+                        font-family: 'Balsamiq Sans', cursive;
+                        color: #000;
+                        font-feature-settings: 'clig' off, 'liga' off;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+
+                    }
+                }
+
+
+                .story__friend 
+                {
+                    position: absolute;
+                    left: 40%;
+                    top: -20%;
+
+                    @media screen and (max-width: 340px) 
+                    {
+                        left: 42%;
+
+                        .contentFriend 
+                        {
+                            width: 50px;
+                            height: 50px;
+                            &__img
+                            {
+                                width: 50px;
+                                height: 50px;
+                            }
+                        }
+                    }
+
+                    @media screen and (max-width: 255px) 
+                    {
+                        left: 38%; 
+                    }
+
+                    @media screen and (min-width: 370px) 
+                    {
+                        left: 43%; 
+                    }
+                }
+            }
+
+            .dataDown 
+            {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+
+                b
+                {
+                    color: #2F2F2F;
+                    font-feature-settings: 'clig' off, 'liga' off;
+                    font-family: 'Balsamiq Sans', cursive;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    margin-bottom: 3vw;
+
+                    @media screen and (min-width: 500px) 
+                    {
+                        margin-bottom: 15px;
+                    }
+                }
+
+                span
+                {
+                    color: #2F2F2F;
+                    font-feature-settings: 'clig' off, 'liga' off;
+                    font-family: 'Balsamiq Sans', cursive;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    margin-bottom: 2vw;
+                    @media screen and (min-width: 500px) 
+                    {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+
+            .actionsProfile 
+            {
+                
+                display: flex;
+                gap: 3vw;
+                justify-content: center;
+                
+                b
+                {
+
+                    border-radius: 10px;
+                    background: linear-gradient(144deg, #EB5E5C 0%, #FF7674 100%);
+                    padding-top: 2vw;
+                    padding-bottom: 2vw;
+                    @media screen and (min-width: 500px) 
+                    {
+                        padding-top: 10px;
+                        padding-bottom: 10px;   
+                    }
+
+
+
+                    span 
+                    {
+                        color: #F8F8F8;
+                        font-feature-settings: 'clig' off, 'liga' off;
+                        font-family: 'Balsamiq Sans', cursive;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                        margin-left: 12vw;
+                        margin-right: 12vw;
+
+                        @media  screen and (max-width:340px ) 
+    
+                        {
+                            font-size: 10px;
+                        }
+
+                        @media screen and (min-width: 500px) 
+                        {
+
+                            margin-left: 60px;
+                            margin-right: 60px;
+  
+                        }
+
+                        
+                        
+                        &.mesagge 
+                        {
+                            margin-left: 10vw;
+                            margin-right: 10vw;                        
+                        
+                            @media screen and (min-width: 500px) 
+                            {
+                                margin-left: 50px;
+                                margin-right: 50px;
+      
+                            }
+                        }
+
+
+
+
+
+                    }
+                }
+            }
+
+            
+        }
+    }
+
+
+    .profileDown 
+    {
+        width: 100vw;
+        margin-top: 3vw;
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px;
+        @media screen and (min-width: 500px) 
+        {
+            margin-top: 15px;
+            width: 500px;       
+        }
+
+        
+
+        &__type 
+        {
+            margin-left: 8vw;
+            margin-right: 8vw;
+            display: flex;
+            justify-content: space-between;
+            @media screen and (min-width: 500px) 
+            {
+                margin-left: 40px;
+                margin-right: 40px;     
+            }
+            span
+            {
+                @media  screen and (max-width:340px ) 
+    
+                {
+                    font-size: 10px;
+                }
+            }
+
+
+        }
+
+        &__content
+         { 
+            margin-top: 2vw;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ajusta el tamaño mínimo y máximo de cada columna */
+            grid-auto-rows: auto; /* Ajusta el tamaño de las filas automáticamente */
+            gap: 1rem; /* Espacio entre las imágenes */
+            align-items: flex-start;
+            overflow: hidden; 
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth; // Añade esta línea
+
+            @media screen and (min-width: 500px) 
+            {
+                margin-top: 10px;         
+                width: 500px; 
+            }
+
+            @media  screen and (max-width:205px ) 
+    
+            {
+
+            }
+
+            
+
+         }
+    }
+}

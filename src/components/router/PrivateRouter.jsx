@@ -3,9 +3,11 @@ import { Navigate, Outlet } from 'react-router-dom'
 
 const PrivateRouter = ({isAutenticated}) => {
   return (
-    <div>{
-      isAutenticated && <Outlet /> 
-    }</div>
+    <div>
+    {
+           isAutenticated ? <Outlet /> : <Navigate to={"/login"}/>
+    }
+    </div>
   )
 }
 

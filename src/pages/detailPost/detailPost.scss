@@ -1,0 +1,380 @@
+
+.detailPost 
+{
+    
+
+    height: 100vh;
+    overflow-y:hidden ;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth; // Añade esta línea
+
+    @media screen and (min-width: 500px) 
+    {
+        width: 95vw;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto; /* Esto centra el <div> horizontalmente */       
+    }
+    &__content
+    {
+        width: 100vw;
+        max-width: 500px;
+        margin-bottom: 18vw;
+        background: radial-gradient( rgba(255, 118, 116, 0.60) 0%, rgba(255, 118, 116, 0.00) 100%);
+
+
+        .content
+        {
+            width: 100vw;
+            position: relative;
+            max-width: 500px;
+
+            .back
+            {
+                max-width: 500px;
+                position: absolute;
+                top: 20%;
+                left: 20%;
+            }
+
+            .points
+            {
+                position: absolute;
+                top: 22%;
+                left: 85%;
+                max-width: 500px;
+            }
+
+            .imgContent 
+            {
+                    width: 100vw;
+                    height: auto;
+                    max-width: 500px;
+            }
+
+            .info 
+            {
+                max-width: 500px;
+                border-radius: 5vw;
+                background: #FFF;
+                display: flex;
+                margin-left: 4vw;
+                margin-right: 4vw;
+                justify-content: space-between;
+                position: absolute;
+                top: 90%;
+                left: 7%;
+                width: 80%;
+                height: 20vw;
+                
+                @media screen and (min-width: 500px ) 
+                {
+                    border-radius: 20px;
+                    display: flex;
+                    gap: 30px;    
+                    margin-left: 20px;
+                    margin-right: 20px;
+                    height: 100px;
+                    width: 400px;
+                    
+                }
+
+
+
+            .userImg
+            {
+                display: flex;
+                flex-direction: row;
+                gap: 4vw;
+                margin-left: 4vw;
+                max-width: 500px;
+
+                @media screen and (min-width: 500px) 
+                {
+                    gap: 21.76px;    
+                    margin-left: 20px;     
+
+                }
+                .contentFriend 
+                {
+                    margin-top: 4vw;
+                    margin-left: 1vw;
+                    width: 15vw;
+                    height: 15vw;
+                    max-width: 500px;
+                    @media screen and (min-width: 500px) 
+                    {
+                        margin-top: 15px;
+                        width: 75px;
+                        height: 75px;                    
+                
+                    }
+
+                    &__img
+                    {
+                        width: 15vw;
+                        height: 15vw;
+                        max-width: 500px;
+                        @media screen and (min-width: 500px) 
+                        {
+                            width: 75px;
+                            height: 75px;                    
+                    
+                        }
+
+                    }
+                }
+
+                .userName 
+                {
+                    font-size: 5vw;
+
+                    @media screen and (min-width: 500px) 
+                    {
+                        font-size: 25px; 
+                        align-self: center;   
+                    }
+                }
+            }
+
+            .lcs
+            {
+                max-width: 500px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 2vw;
+                margin-right: 5vw;
+
+                @media screen and (min-width: 500px) 
+                {
+                     font-size: 40px;
+                }
+
+                .like
+                {
+                   font-size: 7vw;
+                   max-width: 500px;
+                   display: flex;
+                   flex-direction: column;
+                   @media screen and (min-width: 500px) 
+                   {
+                        font-size: 40px;
+                   }
+                   
+                   .numberLike
+                   {
+                       max-width: 500px;
+                       color: #2F2F2F;
+                       text-align: center;
+                       font-feature-settings: 'clig' off, 'liga' off;
+                       font-family: 'Balsamiq Sans', cursive;
+                       font-size: 10px;
+                       font-style: normal;
+                       font-weight: 400;
+                       line-height: normal;
+                       @media screen and (max-width: 250px)
+                       {
+                           font-size: 7px;
+                       }
+                   }
+                }
+
+                .commentPost 
+                {                    
+                    .commentPostIcom 
+                    {
+                        max-width: 500px;
+                        margin-top: 15px;
+                        width: 6vw;
+                        height: 6vw;
+                        @media screen and (min-width: 500px) 
+                        {
+                            width: 34.7px;
+                            height: 34.7px;
+                        }
+                    }
+                    display: flex;
+                    flex-direction: column;
+                    
+                    .numberComments
+                    {
+                        max-width: 500px;
+                        margin-top: 5px;
+                        color: #2F2F2F;
+                        text-align: center;
+                        font-feature-settings: 'clig' off, 'liga' off;
+                        font-family: 'Balsamiq Sans', cursive;
+                        font-size: 10px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+
+                        @media screen and (max-width: 250px)
+                        {
+                            font-size: 7px;
+                        }
+                    }
+                }
+
+            }
+        }
+        }
+
+        .postDes
+        {
+            margin-top: 15vw;
+            margin-left: 3vw;
+            @media screen and (min-width: 500px) 
+            {
+                margin-top: 75px;
+                margin-left: 15px;            
+            }
+            .postDescription 
+            {
+                color: #2F2F2F;
+                text-align: justify;
+                font-feature-settings: 'clig' off, 'liga' off;
+                font-family:'Baloo Thambi 2', cursive;
+                font-size: 8vw;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+
+                @media screen and (min-width: 500px) 
+                {
+                    font-size: 40px; 
+                }
+            }
+        }
+
+        .commentSection
+        {
+            max-width: 500px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            padding-bottom: 100px;
+
+            @media screen and (min-width: 500px) 
+            {
+                align-self: center;
+
+            }
+
+            .story__friend 
+            {
+
+                &.commentar
+                {
+                    margin-left: 10px;
+                    border: none;
+                    @media screen and (min-width: 500px) 
+                    {
+                        align-self: center;        
+                        height: 50px;
+
+    
+    
+                    }
+                    
+                    .contentFriend 
+                    {
+                        max-width: 500px;
+                        width: 10vw;
+                        height: 10vw;
+                        margin-top: 4.5vw;
+                        @media screen and (min-width: 500px) 
+                        {
+                            width: 50px;
+                            height: 50px;   
+                            align-self: center;     
+                            margin-top: 1vw;
+                        }
+                        &__img 
+                        {
+                            width: 10vw;
+                            height: 10vw;
+                            @media screen and (min-width: 500px) 
+                            {
+                                width: 50px;
+                                height: 50px;   
+         
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            
+
+            .write 
+            {
+                max-width: 500px;
+
+                position: relative;
+                border-radius: 20px;
+                width: 80vw;
+                @media screen and (min-width: 500px) 
+                {
+                    width: 485px;
+
+                }
+                .inputComment
+                {
+                    max-width: 500px;
+                    width: 80vw;
+                    border-radius: 20px;
+                    height: 10vw;
+
+                    @media screen and (min-width: 500px) 
+                    {
+                        width: 387.10px;
+                        height: 48.39px; 
+                    }
+
+                }
+
+                .send 
+                {
+                    max-width: 500px;
+                    position: absolute;
+                    left: 88.5%;
+                    top: 14%;
+                    width: 7vw;
+                    height: 7vw;
+
+                    @media screen and (min-width: 500px) 
+                    {
+                        width: 34.6px;
+                        height: 33.26px;  
+                        left: 85%;
+
+
+                    }
+                }
+
+            }
+        }
+
+
+
+
+        
+
+
+
+
+
+    }
+}
+
+
+
+.wrapper 
+{
+
+
+}

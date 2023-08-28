@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useReducer } from 'react'
+import React, { createContext, useEffect, useReducer, useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Register from '../../pages/register/Register'
 import Login from '../../pages/login/Login'
@@ -9,6 +9,8 @@ import { initialUser, userReducer } from '../../services/usersReducer';
 import { getSession } from '../../services/sessionService';
 import Profile from '../../pages/profile/Profile';
 import Layout from '../layout/Layout';
+import DetailPost from '../../pages/detailPost/DetailPost';
+import NewPost from '../../pages/newPost/NewPost';
 
 export const AppContext = createContext({});
 
@@ -26,11 +28,14 @@ const Router = () => {
         }
     }, [])
 
-    const [userLogin, userDispatch] = useReducer(userReducer, initialUser)
+    const [userLogin, userDispatch] = useReducer(userReducer, initialUser);
+    const [posts, setPosts] = useState([]);
+    const [friends, setFriends] = useState([]);
     const globalState = {user: {
         userLogin,
-        userDispatch
-    }}
+        userDispatch,
+        
+    }, userData: null, posts, setPosts, friends, setFriends}
 
   return (
     <AppContext.Provider value={globalState}>
@@ -39,14 +44,15 @@ const Router = () => {
             <Route path='/'>
                 <Route element={<PublicRouter isAutenticated={userLogin.isAutenticated}/>}>
                     <Route path='register' element={<Register/>}/>
-                    <Route path='login' element={<Login/>}/>
+                    <Route index path='login' element={<Login/>}/>
                 </Route>
-
+                
                 <Route element={<PrivateRouter isAutenticated={userLogin.isAutenticated}/>}>
-                    <Route element={<Layout/>}>
-                        <Route index element={<Home/>}/>
-                        <Route path='/profile' element={<Profile/>}/>
-                    </Route>
+
+                        <Route index path='/' element={<Home/>}/>
+                        <Route path='/profile/:idProfile' element={<Profile/>}/>
+                        <Route path='/post/:idPost' element={<DetailPost/>}/>
+                        <Route path='/NewPost' element={<NewPost/>}/>
                 </Route>
             </Route>
         </Routes>
@@ -55,4 +61,4 @@ const Router = () => {
   )
 }
 
-export default Router
+export default Router;

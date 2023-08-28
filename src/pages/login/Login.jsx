@@ -18,7 +18,7 @@ const Login = () => {
             const user = await getOneUser(data.email, data.password)
             console.log(user);
             if (user) {
-                Swal.fire('Bienvenide', `Bienvenide ${user.name}`, 'success').then(() => {
+                Swal.fire('Bienvenide', `Bienvenido, ${user.name}.`, 'success').then(() => {
                 userDispatch({
                     type: "login",
                     payload: {
@@ -26,8 +26,8 @@ const Login = () => {
                         user: user
                     }
                 })
-            saveSession(user)
-            navigate('/')
+            saveSession(user);
+            navigate('/');
             })
             }else {
                 Swal.fire('Error', 'El usuario ingresado no existe.', 'error');
@@ -57,4 +57,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default Login;

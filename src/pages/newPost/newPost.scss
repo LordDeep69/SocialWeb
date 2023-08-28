@@ -1,0 +1,96 @@
+// Estilos del contenedor del formulario
+.container {
+    display: flex; // Usar flexbox
+    flex-direction: column;
+    align-items: center; // Centrar verticalmente
+    justify-content: center; // Centrar horizontalmente
+    height: 100vh; // Ocupar todo el alto de la ventana
+    background-color: #f0f0f0; // Dar un color de fondo
+    background: radial-gradient( rgba(204, 46, 44, 0.6) 0%, rgba(255, 118, 116, 0.00) 100%);
+    font-family: 'Balsamiq Sans', cursive;
+  }
+
+
+  .story__friend 
+  {
+    &:newPost
+    {
+      flex-direction: row;
+      gap: 15px;
+    }
+
+  }
+  
+  // Estilos del formulario
+// Estilos del formulario
+.form {
+    font-family: 'Balsamiq Sans', cursive;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 2px solid #a61573; // Añadir un borde externo al formulario
+    border-radius: 10px; // Añadir un radio a las esquinas del borde
+    padding-top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 50px;
+    background: radial-gradient( rgba(255, 118, 116, 0.60) 0%, rgba(255, 118, 116, 0.00) 100%);
+
+  }
+  
+  
+  // Estilos de cada grupo de campo
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Balsamiq Sans', cursive;
+  }
+  
+  // Estilos de las etiquetas de los campos
+  .label {
+    font-family: 'Balsamiq Sans', cursive;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    color: #333;
+  }
+  
+  // Estilos de los campos de entrada
+  .input {
+    font-family: 'Balsamiq Sans', cursive;    font-size: 16px;
+    font-weight: normal;
+    color: #333;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  // Estilos del botón de envío
+  .button {
+    font-family: 'Balsamiq Sans', cursive;    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #c718b8; // Un tono más oscuro de verde
+  }
+  
+  // Estilos del botón de envío al pasar el cursor por encima
+  .button:hover {
+    background-color: #903889; // Un tono más oscuro de verde
+  }
+  
+  // Estilos del botón de envío al hacer clic
+  .button:active {
+      transform: scale(0.95); // Una pequeña reducción de tamaño para dar un efecto de presión
+  }
+  
+  // Estilos del elemento img para mostrar la imagen seleccionada
+  .preview {
+      width: auto; // Ajustar el ancho al tamaño de la imagen
+      height: 200px; // Limitar el alto a un valor fijo
+      object-fit: contain; // Ajustar la imagen al espacio disponible sin deformarla
+      margin-top: 10px; // Dar un margen superior para separarlo del input
+  }
+  

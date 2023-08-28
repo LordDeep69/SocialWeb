@@ -10,11 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@cloudinary/react": "^1.11.2",
+    "@cloudinary/url-gen": "^1.11.2",
     "axios": "^1.4.0",
     "bootstrap": "^5.3.1",
+    "cloudinary-react": "^1.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-hook-form": "^7.45.2",
+    "react-hook-form": "^7.45.4",
     "react-router-dom": "^6.14.2",
     "saa": "^1.0.0",
     "sass": "^1.64.2",
