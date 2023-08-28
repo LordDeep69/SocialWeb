@@ -50,7 +50,7 @@ const Login = () => {
             <input type="password" className="form-control mt-2"  placeholder="Escriba su contraseña" {...register('password', {required: true})}/>
             </label>
         </div>
-        <button type="submit" className='btn btn-success'>Registrarse</button>
+        <button type="submit" className='btn btn-success'>Iniciar Sesión</button>
         <span className='mt-3'>Si no tienes cuenta, <Link to="/register">registrate</Link></span>
         </form>
     </main>
