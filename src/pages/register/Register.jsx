@@ -12,25 +12,34 @@ const Register = () => {
     const {register, handleSubmit, formState: {errors}, reset} = useForm()
 
     const onSubmit = async (data) => {
+        // Agregar las propiedades followers, following y savedPosts al objeto data
+        data.followers = []
+        data.following = []
+        data.savedPosts = []
+      
         const response = await saveUser(data)
         console.log(response);
         if (response) {
-            Swal.fire('Usuario registrado', `El usuario fue registrado con exito`, 'success')
-            navigate('/login')
+          Swal.fire('Usuario registrado', `El usuario fue registrado con exito`, 'success')
+          navigate('/login')
         }else {
-            Swal.fire('Error', `Hubo un problema al registrar el usuario`, 'error')
-            reset({
-                name: '',
-                email: '',
-                password: '',
-                gender: ''
-            })
+          Swal.fire('Error', `Hubo un problema al registrar el usuario`, 'error')
+          reset({
+            name: '',
+            email: '',
+            password: '',
+            gender: '',
+            image: '', // Agregar los nuevos campos al reset
+            cover: '',
+            greet: '',
+            description: ''
+          })
         }
-        
-    }
+      }
+      
 
   return (
-    <main className='d-flex justify-content-center align-items-center vw-100 vh-100'>
+    <main className='d-flex justify-content-center align-items-center vw-120 vh-120'>
         <form className='card p-5 bg-info-subtle' onSubmit={handleSubmit(onSubmit)}>
         <div className="mb-3">
             <label  className="form-label"><span >Nombre</span>
@@ -57,6 +66,27 @@ const Register = () => {
         </select>
             </label>
         </div>
+        <div className="mb-3">
+        <label className="form-label"><span>Imagen de perfil</span>
+            <input type="url" className="form-control mt-2" placeholder="Escriba la URL de la imagen de perfil" {...register('image', {required: true})}/>
+        </label>
+        </div>
+        <div className="mb-3">
+        <label className="form-label"><span>Imagen de portada</span>
+            <input type="url" className="form-control mt-2" placeholder="Escriba la URL de la imagen de portada" {...register('cover', {required: true})}/>
+        </label>
+        </div>
+        <div className="mb-3">
+        <label className="form-label"><span>Saludo</span>
+            <input type="text" className="form-control mt-2" placeholder="Escriba un saludo para su perfil" {...register('greet', {required: true})}/>
+        </label>
+        </div>
+        <div className="mb-3">
+        <label className="form-label"><span>Descripción</span>
+            <textarea className="form-control mt-2" placeholder="Escriba una breve descripción sobre usted" {...register('description', {required: true})}/>
+        </label>
+        </div>
+
         <button type="submit" className='btn btn-success'>Registrarse</button>
         </form>
     </main>
