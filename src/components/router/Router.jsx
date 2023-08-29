@@ -23,7 +23,7 @@ const Router = () => {
             type: "login",
             payload: {
                 isAutenticated: true, 
-                user: user
+                user: user 
             }})    
         }
     }, [])
