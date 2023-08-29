@@ -24,7 +24,7 @@ const Router = () => {
             payload: {
                 isAutenticated: true,
                 user: user
-            }})   
+            }})    
         }
     }, [])
 
