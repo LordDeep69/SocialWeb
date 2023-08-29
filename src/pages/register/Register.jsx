@@ -12,7 +12,7 @@ const Register = () => {
     const {register, handleSubmit, formState: {errors}, reset} = useForm()
 
     const onSubmit = async (data) => {
-        // Agregar las propiedades followers, following y savedPosts al objeto data
+        
         data.followers = []
         data.following = []
         data.savedPosts = []
@@ -29,7 +29,7 @@ const Register = () => {
             email: '',
             password: '',
             gender: '',
-            image: '', // Agregar los nuevos campos al reset
+            image: '', 
             cover: '',
             greet: '',
             description: ''

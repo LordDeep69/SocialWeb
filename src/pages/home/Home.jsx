@@ -15,9 +15,7 @@ const Home = () => {
 
 
   const {user: {userDispatch, userLogin: {user}}, posts, setPosts, friends, setFriends} = useContext(AppContext)
-    // Crear un estado local para almacenar el array de posts de los amigos del usuario
-    // const [posts, setPosts] = useState([]);
-    // const [friends, setFriends] = useState([]);
+    
      // Usar useEffect para ejecutar la función que obtiene los posts cuando se monta el componente
   useEffect(() => {
     // Definir una función asíncrona que obtiene los posts
@@ -67,7 +65,7 @@ const Home = () => {
 
   const handleClickOut = () => 
   {
-    Swal.fire('Bienvenide', `Bienvenido, ${user.name}.`, 'success').then(() => {
+    Swal.fire('Bienvenido', `Bienvenido, ${user.name}.`, 'success').then(() => {
       userDispatch({
           type: "logout",
       })
@@ -139,8 +137,8 @@ const Home = () => {
 
 
 
-// Añade los eventos de mouse al elemento de la sección con la clase home__main usando el hook useEffect
-// Usa el hook useEffect para añadir los eventos de mouse al elemento de la sección cuando se monte el componente, y eliminarlos cuando se desmonte
+// Se añaden los eventos de mouse al elemento de la sección con la clase home__main usando el hook useEffect
+// Se usa el hook useEffect para añadir los eventos de mouse al elemento de la sección cuando se monte el componente, y eliminarlos cuando se desmonte
 useEffect(() => {
   storyRef.current.addEventListener('mousedown', handleMouseDown);
   storyRef.current.addEventListener('mouseup', handleMouseUp);

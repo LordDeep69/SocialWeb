@@ -14,11 +14,11 @@ const NewPost = () => {
     const handleHome = () => {
       navigate('/');
     };
-    // Función para manejar el envío del formulario
+
     // Función para manejar el envío del formulario
 const onSubmit = async (data) => {
     console.log(data); // Mostrar los datos del formulario en la consola
-    // Aquí puedes hacer lo que quieras con los datos, como enviarlos a una API o guardarlos en un estado
+    
   
     try {
       // Crear una variable local para guardar la URL segura de la imagen
@@ -31,15 +31,16 @@ const onSubmit = async (data) => {
         let success = await createPost(user.id, data.description, imageUrl); // Pasar la variable imageUrl como argumento
         // Verificar si se ha creado el post correctamente
         if (success) {
-          // Imprimir en consola el mensaje y los datos del post
+
           // Crear un sweetalert2 con el título ¡Post Creado con Éxito! y el icono de éxito
         Swal.fire({
             title: '¡Post Creado con Éxito!',
             icon: 'success',
-            timer: 1500, // Opcionalmente, puedes poner un tiempo de espera para que se cierre automáticamente
+            timer: 1500,
           }).then(() => {
             // Ejecutar una función cuando se cierre el sweetalert2
             console.log('FINALIZADO'); // Imprimir en consola FINALIZADO
+            handleHome();
           });
         }
          else {
