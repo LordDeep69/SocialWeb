@@ -22,7 +22,7 @@ const Router = () => {
             userDispatch({
             type: "login",
             payload: {
-                isAutenticated: true,
+                isAutenticated: true, 
                 user: user
             }})    
         }
